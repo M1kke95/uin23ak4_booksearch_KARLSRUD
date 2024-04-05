@@ -31,20 +31,19 @@ export default function SearchResults({ setQuery, staticBooks }) {
 
     return (
         <>
-            <p>Find your favorite book</p>
+            <section>
+            <h2>Find your favorite book</h2>
             <form onSubmit={handleSubmit}>
-                <input className="searchBar" type="text" placeholder="Search for a book..." value={search} onChange={(e) => setSearch(e.target.value)}/> 
+                <input id="searchInput" className="searchBar" type="text" placeholder="Enter book title..." value={search} onChange={(e) => setSearch(e.target.value)}/> 
                 <button type="submit">Search</button>
             </form>
-            <nav>
-                <ul className="search-results">
-                    {results && results
-                    .sort((a, b) => (b.ratings_average || 0) - (a.ratings_average || 0)).map((result, index) => ( 
-                    //brukte denne siden for å finne undefined ratings https://codedamn.com/news/javascript/check-if-undefined-null
+            <ul className="search-results">
+                {results && results
+                .sort((a, b) => (b.ratings_average || 0) - (a.ratings_average || 0)).map((result, index) => ( 
                     <Book key={index} book={result} />
-                    ))}
-                </ul>
-            </nav>
+                ))}
+            </ul>
+        </section>
         </>
     );
 }

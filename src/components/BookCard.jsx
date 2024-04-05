@@ -12,7 +12,7 @@ export default function Book({book}){
                 <img src={`https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`} alt={book.title} />
                 ) : (
                 <>
-                <img src='src\images\vecteezy_vintage-frame-banner-clip-art_22072013.png' alt="image not available"/> <a href="https://www.vecteezy.com/free-png/label">Label PNGs by Vecteezy</a>
+                <div className="fallback_photo"><span>No Cover Available</span></div>
                 </>
             )}
             <h2>author: </h2>

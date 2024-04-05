@@ -58,6 +58,7 @@ h1 {
   border-radius: 8px;
   border-right: none;
   outline: none;
+  margin-bottom: 12px;
 }
 
 .searchBar:focus{
@@ -120,13 +121,23 @@ button:focus-visible {
 }
 .search-results img{
   width:100%;
-  height: 50%;
+  height: 392px;
   object-fit: fill;
 }
 
 .fallback_photo{
+  
   min-width: 100%;
-  width: 200px;
-  height: 200px;
+  width: 280px;
+  height: 392px;
   background-color: gray;
+  object-fit: fill;
+  color: #FF6F61;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  font-weight: bolder;
 }

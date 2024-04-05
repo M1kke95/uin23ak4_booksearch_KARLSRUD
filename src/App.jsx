@@ -7,6 +7,7 @@ function App() {
   const [content, setContent] = useState([])
   const [query, setQuery] = useState("")
 
+  
   const getData = async() =>{
     try{
       const response = await fetch(`https://openlibrary.org/search.json?q=${query}`)
